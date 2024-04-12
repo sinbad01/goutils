@@ -13,7 +13,7 @@ func FileMD5(filename string) (string, error) {
 	file, err := os.Open(filename)
 	if err != nil {
 		return "", errors.New(
-			fmt.Sprintf("md5.go hash.FileMD5 os open error %v", err)
+			fmt.Sprintf("md5.go hash.FileMD5 os open error %v", err),
 		)
 	}
 
@@ -21,7 +21,7 @@ func FileMD5(filename string) (string, error) {
 	_, err = io.Copy(md5, file)
 	if err != nil {
 		return "", errors.New(
-			fmt.Sprintf("md5.go hash.FileMD5 os copy error %v", err)
+			fmt.Sprintf("md5.go hash.FileMD5 os copy error %v", err),
 		)
 	}
 
